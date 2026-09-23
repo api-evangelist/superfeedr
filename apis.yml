@@ -1,23 +1,89 @@
 aid: superfeedr
+
 name: Superfeedr
-description: 'Superfeedr is a company surfaced via the API Evangelist harvest backlog (source: news) and
-  added to the network as a stub for full-pipeline profiling.'
+
+description: 'Superfeedr provides a real-time feed API that pushes RSS and Atom updates instantly via PubSubHubbub. It enables publishers and subscribers to deliver content as soon as it changes, offering a simple Push API for developers, content publishers, and application teams.'
+
 url: https://raw.githubusercontent.com/api-evangelist/superfeedr/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:news
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
 - Company
-apis: []
+- Real-time
+- Feed
+- API
+- PubSubHubbub
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/superfeedr-hosts.yml
+- type: Vendors
+  url: vendors/superfeedr-vendors.yml
+- type: SDKs
+  url: packages/superfeedr-packages.yml
+- type: Packages
+  url: packages/superfeedr-packages.yml
+- type: TermsOfService
+  url: https://superfeedr.com/terms
+- type: Pricing
+  url: https://superfeedr.com/pricing
+- type: GitHubOrganization
+  url: https://github.com/superfeedr/
+- type: DeveloperPortal
+  url: https://portal.superfeedr.com/
+- type: Blog
+  url: https://blog.superfeedr.com/
+- type: Documentation
+  url: https://doc.superfeedr.com/
+- type: DomainSecurity
+  url: security/superfeedr-domain-security.yml
 - type: Website
   url: https://superfeedr.com/
+
+- type: PrivacyPolicy
+  url: https://superfeedr.com/privacy
+- type: SignUp
+  url: https://superfeedr.com/users/new
+- type: Support
+  url: https://superfeedr.com/contact
+- type: APIReference
+  url: http://documentation.superfeedr.com/
+- type: GettingStarted
+  url: https://superfeedr.com/about
+
+# x-coverage added by contract module
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's documentation pages are HTML only and no OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found.
+  evidence:
+    - url: https://portal.superfeedr.com/
+      status: 200
+  checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

@@ -1,0 +1,138 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 8
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - portal
+  - source
+  - website
+hosts:
+- host: api.superfeedr.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: superfeedr.com
+  role: api
+  relation: own
+- host: app.superfeedr.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: superfeedr.com
+  role: other
+  relation: own
+- host: blog.superfeedr.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: superfeedr.com
+  role: marketing
+  relation: own
+- host: doc.superfeedr.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: superfeedr.com
+  role: docs
+  relation: own
+- host: docs.superfeedr.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - well-known
+  types: []
+  serves:
+  - docs
+  title: Docs.com - Updated Urls's PubSubHubbub Hub
+  status: 200
+  registrable_domain: superfeedr.com
+  role: docs
+  relation: own
+- host: documentation.superfeedr.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - APIReference
+  serves:
+  - docs
+  - cdn
+  vendor: cloudfront
+  registrable_domain: superfeedr.com
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: portal.superfeedr.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: superfeedr.com
+  role: portal
+  relation: own
+- host: superfeedr.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  - Pricing
+  - Website
+  - PrivacyPolicy
+  - SignUp
+  - Support
+  - GettingStarted
+  serves: []
+  registrable_domain: superfeedr.com
+  role: website
+  relation: own
